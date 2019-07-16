@@ -21,14 +21,14 @@ struct Humidity {
     private let c4: Float80 = 22.6807411
     private let c5: Float80 = -15.9618719
     private let c6: Float80 = 1.80122502
-    private let Pc: Float80 = 220640.0 // hPa
+    private let Pc: Float80 = 22064000.0 // Pa
     
     init(celsius: Double) {
         self.celsius = celsius
         self.kelvin = 273.15 + celsius
     }
     
-    func Pws_hPa() -> Double {
+    func Pws() -> Double {
         let k = Float80(kelvin)
         let n = 1 - (k / Tc)
         let p = Tc / k * (c1 * n + c2 * pow(n, 1.5) + c3 * pow(n, 3) + c4 * pow(n, 3.5) + c5 * pow(n, 4) + c6 * pow(n, 7.5))
