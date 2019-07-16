@@ -14,6 +14,11 @@ struct Humidity {
     var c: Double // celsius
     var rh: Double // relative humidity
     var k: Double  { return c + 273.15 } // kelvin
+    var ah: Double {
+        return cgkJ * (rh * Pws()) / k
+    }
+    
+    private let cgkJ = 2.16679 // gk/J
     
     private let Tc: Float80 = 647.096 // K
     private let c1: Float80 = -7.85951783
