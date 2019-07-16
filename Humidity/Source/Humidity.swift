@@ -14,7 +14,7 @@ struct Humidity {
     var c: Double // celsius
     var rh: Double // relative humidity
     var k: Double  { return c + 273.15 } // kelvin
-    var ah: Double {
+    var ah: Double { // absolute humidity g/m3
         return cgkJ * (rh * Pws()) / k
     }
     
