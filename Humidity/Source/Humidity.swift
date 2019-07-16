@@ -23,17 +23,31 @@ struct Humidity {
     private let c6: Float80 = 1.80122502
     private let Pc: Float80 = 22064000.0 // Pa
     
+    private let Tn: Float80 = 273.16 // K
+    private let a0: Float80 = -13.928169
+    private let a1: Float80 = 34.707823
+    private let Pn: Float80 = 611.657 // Pa
+    
     init(celsius: Double) {
         self.celsius = celsius
         self.kelvin = 273.15 + celsius
     }
     
     func Pws() -> Double {
-        let k = Float80(kelvin)
-        let n = 1 - (k / Tc)
-        let p = Tc / k * (c1 * n + c2 * pow(n, 1.5) + c3 * pow(n, 3) + c4 * pow(n, 3.5) + c5 * pow(n, 4) + c6 * pow(n, 7.5))
-        let l = pow(Float80(M_E), p)
-        let Pws = Pc * l
+        var Pws: Float80
+        if celsius > 0.01 { // estimate for 0°C-373°C
+            let k = Float80(kelvin)
+            let n = 1 - (k / Tc)
+            let p = Tc / k * (c1 * n + c2 * pow(n, 1.5) + c3 * pow(n, 3) + c4 * pow(n, 3.5) + c5 * pow(n, 4) + c6 * pow(n, 7.5))
+            let l = pow(Float80(M_E), p)
+            Pws = Pc * l
+        } else { // estimate for -100°C-0.01°C
+            let k = Float80(kelvin)
+            let n = k / Tn
+            let p = a0 * (1 - pow(n, -1.5)) + a1 * (1 - pow(n, -1.25))
+            let l = pow(Float80(M_E), p)
+            Pws = Pn * l
+        }
         return Double(Pws)
     }
 }
