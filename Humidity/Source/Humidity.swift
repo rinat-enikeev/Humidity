@@ -10,11 +10,11 @@
 
 import Foundation
 
-struct Humidity {
-    var c: Double // celsius
-    var rh: Double // relative humidity
-    var k: Double  { return c + 273.15 } // kelvin
-    var ah: Double { // absolute humidity g/m3
+public struct Humidity {
+    public var c: Double // celsius
+    public var rh: Double // relative humidity
+    public var k: Double  { return c + 273.15 } // kelvin
+    public var ah: Double { // absolute humidity g/m3
         return cgkJ * (rh * Pws()) / k
     }
     
@@ -34,12 +34,12 @@ struct Humidity {
     private let a1: Float80 = 34.707823
     private let Pn: Float80 = 611.657 // Pa
     
-    init(c: Double, rh: Double) {
+    public init(c: Double, rh: Double) {
         self.c = c
         self.rh = rh
     }
     
-    func Pws() -> Double {
+    private func Pws() -> Double {
         var Pws: Float80
         if c > 0.01 { // estimate for 0°C-373°C
             let k = Float80(self.k)
