@@ -10,6 +10,7 @@
 		0EF5B74022DDED8200D9D14A /* Humidity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF5B73622DDED8200D9D14A /* Humidity.framework */; };
 		0EF5B74522DDED8200D9D14A /* HumidityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5B74422DDED8200D9D14A /* HumidityTests.swift */; };
 		0EF5B74722DDED8200D9D14A /* Humidity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF5B73922DDED8200D9D14A /* Humidity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EF5B75222DDEDC200D9D14A /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5B75122DDEDC200D9D14A /* Humidity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		0EF5B73F22DDED8200D9D14A /* HumidityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HumidityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF5B74422DDED8200D9D14A /* HumidityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityTests.swift; sourceTree = "<group>"; };
 		0EF5B74622DDED8200D9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EF5B75122DDEDC200D9D14A /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		0EF5B73822DDED8200D9D14A /* Humidity */ = {
 			isa = PBXGroup;
 			children = (
+				0EF5B75022DDEDAE00D9D14A /* Source */,
 				0EF5B73922DDED8200D9D14A /* Humidity.h */,
 				0EF5B73A22DDED8200D9D14A /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				0EF5B74622DDED8200D9D14A /* Info.plist */,
 			);
 			path = HumidityTests;
+			sourceTree = "<group>";
+		};
+		0EF5B75022DDEDAE00D9D14A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0EF5B75122DDEDC200D9D14A /* Humidity.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					0EF5B73522DDED8200D9D14A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					0EF5B73E22DDED8200D9D14A = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF5B75222DDEDC200D9D14A /* Humidity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		0EF5B74B22DDED8200D9D14A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.btkit.Humidity;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +381,7 @@
 		0EF5B74C22DDED8200D9D14A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +407,7 @@
 		0EF5B74E22DDED8200D9D14A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5V5EUT3ZXJ;
 				INFOPLIST_FILE = HumidityTests/Info.plist;
@@ -409,6 +426,7 @@
 		0EF5B74F22DDED8200D9D14A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5V5EUT3ZXJ;
 				INFOPLIST_FILE = HumidityTests/Info.plist;
