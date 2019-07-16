@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "Humidity"
-  spec.version      = "0.0.2"
-  spec.summary      = "Calculation of absulute humidity based on relative"
+  spec.version      = "0.0.3"
+  spec.summary      = "Calculation of absolute humidity"
   spec.description  = <<-DESC
                         Use to calculate absolute humidity from relative.
                         DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "10.0"
   spec.swift_version = '5.0'
 
-  spec.source       = { :git => "https://github.com/rinat-enikeev/Humidity", :tag => spec.version.to_s }
+  spec.source       = { :git => "https://github.com/rinat-enikeev/Humidity.git", :tag => spec.version.to_s }
 
   spec.source_files  = "Humidity/Source/**/*.{swift,h}"
 
