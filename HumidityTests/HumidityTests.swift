@@ -20,9 +20,9 @@ class HumidityTests: XCTestCase {
     }
 
     func testPws() {
-        let humidity = Humidity(c: 20.0, rh: 0.8)
+        let humidity = Humidity(c: 40.0, rh: 0.5)
         print("============")
-        print("\(humidity.ah)")
+        print("\(humidity.Td ?? 0)")
         print("============")
     }
 

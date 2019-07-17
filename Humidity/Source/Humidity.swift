@@ -17,6 +17,13 @@ public struct Humidity {
     public var ah: Double { // absolute humidity g/m3
         return cgkJ * (rh * Pws()) / k
     }
+    public var Td: Double? {
+        guard let m = m(c: c) else { return nil }
+        guard let A = A(c: c) else { return nil }
+        guard let Tn = Tn(c: c) else { return nil }
+        let Pw = Pws() * rh / 100.0
+        return Tn / ((m / (log10(Pw / A))) - 1.0)
+    }
     
     private let cgkJ = 2.16679 // gk/J
     
@@ -53,5 +60,62 @@ public struct Humidity {
             Pws = Pn * l
         }
         return Pws
+    }
+    
+    private func Tn(c: Double) -> Double? {
+        switch c {
+        case -70.0 ..< -20.0:
+            return 273.1466
+        case -20.0 ..< 50.0:
+            return 240.7263
+        case 50.0 ..< 100.0:
+            return 229.3975
+        case 100.0 ..< 150.0:
+            return 225.1033
+        case 150.0 ..< 200.0:
+            return 227.1704
+        case 200.0 ..< 350.0:
+            return 263.1239
+        default:
+            return nil
+        }
+    }
+    
+    private func A(c: Double) -> Double? {
+        switch c {
+        case -70.0 ..< -20.0:
+            return 6.114742
+        case -20.0 ..< 50.0:
+            return 6.116441
+        case 50.0 ..< 100.0:
+            return 6.004918
+        case 100.0 ..< 150.0:
+            return 5.856548
+        case 150.0 ..< 200.0:
+            return 6.002859
+        case 200.0 ..< 350.0:
+            return 9.980622
+        default:
+            return nil
+        }
+    }
+    
+    private func m(c: Double) -> Double? {
+        switch c {
+        case -70.0 ..< -20.0:
+            return 9.778707
+        case -20.0 ..< 50.0:
+            return 7.591386
+        case 50.0 ..< 100.0:
+            return 7.337936
+        case 100.0 ..< 150.0:
+            return 7.27731
+        case 150.0 ..< 200.0:
+            return 7.290361
+        case 200.0 ..< 350.0:
+            return 7.388931
+        default:
+            return nil
+        }
     }
 }
