@@ -11,18 +11,23 @@
 import Foundation
 
 public struct Humidity {
-    public var c: Double // celsius
+    public var c: Double // celsius °C
     public var rh: Double // relative humidity
-    public var k: Double  { return c + 273.15 } // kelvin
+    public var k: Double  { return c + 273.15 } // kelvin °K
+    public var f: Double { return (c * 9.0/5.0) + 32.0 } // fahrenheit °F
     public var ah: Double { // absolute humidity g/m3
         return cgkJ * (rh * Pws()) / k
     }
-    public var Td: Double? {
+    public var Td: Double? { // dew point °C
         guard let m = m(c: c) else { return nil }
         guard let A = A(c: c) else { return nil }
         guard let Tn = Tn(c: c) else { return nil }
         let Pw = Pws() * rh / 100.0
         return Tn / ((m / (log10(Pw / A))) - 1.0)
+    }
+    public var TdF: Double? { // dew point °F
+        guard let Td = Td else { return nil }
+        return (Td * 9.0/5.0) + 32.0
     }
     
     private let cgkJ = 2.16679 // gk/J
