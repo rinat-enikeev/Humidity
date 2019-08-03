@@ -7,7 +7,7 @@
 
 ## Features
 
-- [x] Absulute Humidity (g/m3)
+- [x] Absulute Humidity (g/m³)
 - [x] Dew Point (°C, °F)
 
 ## Requirements
