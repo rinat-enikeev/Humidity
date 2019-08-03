@@ -1,5 +1,5 @@
 # Humidity
-> Calculate absolute humidity from relative humidity and temperature
+> Calculate absolute humidity and dew point from relative humidity and temperature
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
@@ -7,7 +7,8 @@
 
 ## Features
 
-- [x] Calculate absulute humidity
+- [x] Absulute Humidity (g/m3)
+- [x] Dew Point (°C, °F)
 
 ## Requirements
 
@@ -37,13 +38,19 @@ import Humidity
 import Humidity
 
 let humidity = Humidity(c: 20, rh: 0.8)
-print(humidity.ah) // prints absoulte humidity
+print(humidity.ah) // prints absoulte humidity (g/m3)
+print(humidity.Td) // prints dew point (°C)
+print(humidity.TdF) // prints dew point (°F)
 
 ```
 
 ## Contribute
 
 We would love you for the contribution to **Humidity**, check the ``LICENSE`` file for more info.
+
+## Credits
+
+[The IAPWS Formulation 1995 for the Thermodynamic Properties of Ordinary Water Substance for General and Scientific Use](https://doi.org/10.1063/1.1461829) 
 
 ## Meta
 
