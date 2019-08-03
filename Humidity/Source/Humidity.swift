@@ -15,7 +15,7 @@ public struct Humidity {
     public var rh: Double // relative humidity
     public var k: Double  { return c + 273.15 } // kelvin °K
     public var f: Double { return (c * 9.0/5.0) + 32.0 } // fahrenheit °F
-    public var ah: Double { // absolute humidity g/m3
+    public var ah: Double { // absolute humidity g/m³
         return cgkJ * (rh * Pws()) / k
     }
     public var Td: Double? { // dew point °C

@@ -38,7 +38,7 @@ import Humidity
 import Humidity
 
 let humidity = Humidity(c: 20, rh: 0.8)
-print(humidity.ah) // prints absoulte humidity (g/m3)
+print(humidity.ah) // prints absoulte humidity (g/m³)
 print(humidity.Td) // prints dew point (°C)
 print(humidity.TdF) // prints dew point (°F)
 
