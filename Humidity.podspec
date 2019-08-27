@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Humidity"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "Calculation of absolute humidity"
   spec.description  = <<-DESC
                         Use to calculate absolute humidity from relative.
