@@ -29,6 +29,10 @@ public struct Humidity {
         guard let Td = Td else { return nil }
         return (Td * 9.0/5.0) + 32.0
     }
+    public var TdK: Double? { // dew point °K
+        guard let Td = Td else { return nil }
+        return Td + 273.15
+    }
     
     private let cgkJ = 2.16679 // gk/J
     
