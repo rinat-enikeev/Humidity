@@ -10,6 +10,8 @@
 		<dict>
 			<key>NSStringFormatSpecTypeKey</key>
 			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>f</string>
 			<key>other</key>
 			<string>%@%%</string>
 		</dict>
@@ -38,16 +40,6 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>f</string>
-			<key>zero</key>
-			<string>%2$@percent</string>
-			<key>one</key>
-			<string>%2$@percent</string>
-			<key>two</key>
-			<string>%2$@percent</string>
-			<key>few</key>
-			<string>%2$@percent</string>
-			<key>many</key>
-			<string>%2$@of percent</string>
 			<key>other</key>
 			<string>%2$@percent</string>
 		</dict>
@@ -62,16 +54,6 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>f</string>
-			<key>zero</key>
-			<string>%2$@grams/cubic meter</string>
-			<key>one</key>
-			<string>%2$@grams/cubic meter</string>
-			<key>two</key>
-			<string>%2$@grams/cubic meter</string>
-			<key>few</key>
-			<string>%2$@grams/cubic meter</string>
-			<key>many</key>
-			<string>%2$@grams/cubic meter</string>
 			<key>other</key>
 			<string>%2$@grams/cubic meter</string>
 		</dict>
