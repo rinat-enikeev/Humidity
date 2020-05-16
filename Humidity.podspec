@@ -16,5 +16,5 @@ Pod::Spec.new do |spec|
   spec.source             = { :git => "https://github.com/rinat-enikeev/Humidity.git", :tag => spec.version.to_s }
 
   spec.source_files       = "Humidity/Source/**/*.{swift,h}"
-  spec.resource_bundle    = { "Humidity" => ["Humidity/Resources/*.stringsdict"] }
+  spec.resource_bundle    = { "Humidity" => ["Humidity/Resources/*.lproj/*.stringsdict"] }
 end
