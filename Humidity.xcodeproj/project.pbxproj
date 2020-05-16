@@ -16,6 +16,8 @@
 		A907A1DF24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A907A1DE24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift */; };
 		A949A825246FC489006B7F4F /* HumidityFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A824246FC489006B7F4F /* HumidityFormatter.swift */; };
 		A949A831246FCAAC006B7F4F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = A949A833246FCAAC006B7F4F /* Localizable.stringsdict */; };
+		A949A83724703228006B7F4F /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */; };
+		A949A839247032E4006B7F4F /* HumiditySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A838247032E4006B7F4F /* HumiditySettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		A949A824246FC489006B7F4F /* HumidityFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityFormatter.swift; sourceTree = "<group>"; };
 		A949A832246FCAAC006B7F4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		A949A835246FD3DB006B7F4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		A949A838247032E4006B7F4F /* HumiditySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumiditySettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				A907A1DC24603EB800041F6E /* HumidityError.swift */,
 				A907A1DE24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift */,
 				A949A824246FC489006B7F4F /* HumidityFormatter.swift */,
+				A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */,
+				A949A838247032E4006B7F4F /* HumiditySettings.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -233,9 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A949A83724703228006B7F4F /* UserDefaultsWrapper.swift in Sources */,
 				A949A825246FC489006B7F4F /* HumidityFormatter.swift in Sources */,
 				A907A1DB24603E8400041F6E /* UnitHumidity.swift in Sources */,
 				A907A1DF24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift in Sources */,
+				A949A839247032E4006B7F4F /* HumiditySettings.swift in Sources */,
 				A907A1DD24603EB800041F6E /* HumidityError.swift in Sources */,
 				0EF5B75222DDEDC200D9D14A /* Humidity.swift in Sources */,
 			);

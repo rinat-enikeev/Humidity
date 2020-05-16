@@ -22,6 +22,8 @@ open class HumidityFormatter: Formatter {
     public override init() {
         numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 1
+        numberFormatter.maximumFractionDigits = 6
         unitStyle = .medium
         locale = Locale.current
         super.init()
@@ -30,6 +32,8 @@ open class HumidityFormatter: Formatter {
     public required init?(coder: NSCoder) {
         numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 1
+        numberFormatter.maximumFractionDigits = 6
         unitStyle = .medium
         locale = Locale.current
         super.init(coder:coder)
@@ -76,15 +80,13 @@ open class HumidityFormatter: Formatter {
         return unit
     }
 
-    private static let bundle: Bundle = Bundle(path: Bundle(for: HumidityFormatter.self).path(forResource: "Humidity", ofType: "bundle")!) ?? Bundle.main
-
     private let shortSymbol: [Unit: String] = [
-        .gramPerMeterCubic: NSLocalizedString("%f g per c m %@", bundle: HumidityFormatter.bundle, comment: ""),
-        .relative: NSLocalizedString("%f percent symbol %@", bundle: HumidityFormatter.bundle, comment: "")
+        .gramPerMeterCubic: NSLocalizedString("%f g per c m %@", bundle: HumiditySettings.bundle, comment: ""),
+        .relative: NSLocalizedString("%f percent symbol %@", bundle: HumiditySettings.bundle, comment: "")
     ]
 
     private let plural: [Unit: String] = [
-        .gramPerMeterCubic: NSLocalizedString("%f grams per cubic meter %@", bundle: HumidityFormatter.bundle, comment: ""),
-        .relative: NSLocalizedString("%f percent %@", bundle: HumidityFormatter.bundle, comment: "")
+        .gramPerMeterCubic: NSLocalizedString("%f grams per cubic meter %@", bundle: HumiditySettings.bundle, comment: ""),
+        .relative: NSLocalizedString("%f percent %@", bundle: HumiditySettings.bundle, comment: "")
     ]
 }

@@ -22,6 +22,8 @@
 		<dict>
 			<key>NSStringFormatSpecTypeKey</key>
 			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>f</string>
 			<key>other</key>
 			<string>%2$@гр/м³</string>
 		</dict>
@@ -60,18 +62,8 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>f</string>
-			<key>zero</key>
-			<string>%2$@грамм/кубический метр</string>
-			<key>one</key>
-			<string>%2$@грамм/кубический метр</string>
-			<key>two</key>
-			<string>%2$@грамма/кубический метр</string>
-			<key>few</key>
-			<string>%2$@граммов/кубический метр</string>
-			<key>many</key>
-			<string>%2$@граммов/кубический метр</string>
 			<key>other</key>
-			<string>%2$@граммов/кубический метр</string>
+			<string>%2$@грамм/кубический метр</string>
 		</dict>
 	</dict>
 </dict>
