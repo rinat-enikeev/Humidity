@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%f percent symbol %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@v1_percent_symbol@</string>
+		<key>v1_percent_symbol</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>f</string>
+			<key>other</key>
+			<string>%@%%</string>
+		</dict>
+	</dict>
+	<key>%f g per c m %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@v1_g_per_c_m@</string>
+		<key>v1_g_per_c_m</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>f</string>
+			<key>other</key>
+			<string>%2$@g/m³</string>
+		</dict>
+	</dict>
+	<key>%f percent %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@v1_percent@</string>
+		<key>v1_percent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>f</string>
+			<key>other</key>
+			<string>%2$@percent</string>
+		</dict>
+	</dict>
+	<key>%f grams per cubic meter %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@v1_grams_per_cubic_meter@</string>
+		<key>v1_grams_per_cubic_meter</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>f</string>
+			<key>other</key>
+			<string>%2$@grams/cubic meter</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
