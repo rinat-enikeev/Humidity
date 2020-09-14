@@ -17,6 +17,7 @@
 		A949A831246FCAAC006B7F4F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = A949A833246FCAAC006B7F4F /* Localizable.stringsdict */; };
 		A949A83724703228006B7F4F /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */; };
 		A949A839247032E4006B7F4F /* HumiditySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A838247032E4006B7F4F /* HumiditySettings.swift */; };
+		A98BC879250FDF21001CEFDC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98BC878250FDF21001CEFDC /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A949A835246FD3DB006B7F4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		A949A838247032E4006B7F4F /* HumiditySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumiditySettings.swift; sourceTree = "<group>"; };
+		A98BC878250FDF21001CEFDC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				A949A824246FC489006B7F4F /* HumidityFormatter.swift */,
 				A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */,
 				A949A838247032E4006B7F4F /* HumiditySettings.swift */,
+				A98BC878250FDF21001CEFDC /* String+Extension.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A949A83724703228006B7F4F /* UserDefaultsWrapper.swift in Sources */,
+				A98BC879250FDF21001CEFDC /* String+Extension.swift in Sources */,
 				A949A825246FC489006B7F4F /* HumidityFormatter.swift in Sources */,
 				A907A1DB24603E8400041F6E /* UnitHumidity.swift in Sources */,
 				A907A1DF24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift in Sources */,

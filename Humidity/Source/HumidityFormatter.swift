@@ -69,7 +69,7 @@ open class HumidityFormatter: Formatter {
 
     private func decimalString(forValue value: Double) -> String {
         numberFormatter.numberStyle = .decimal
-        let separator = unitStyle == .short ? "" : " "
+        let separator = unitStyle == .short ? "" : .npsb
         guard let formattedValue = numberFormatter.string(from:NSNumber(value: value)) else {
             fatalError("Cannot format \(value) as string")
         }
@@ -78,12 +78,13 @@ open class HumidityFormatter: Formatter {
 
     private func percentString(forValue value: Double) -> String {
         numberFormatter.numberStyle = .percent
-        let separator = unitStyle == .short ? "" : " "
+        let separator = unitStyle == .short ? "" : .npsb
         guard let formattedValue = numberFormatter.string(from:NSNumber(value: value)) else {
             fatalError("Cannot format \(value) as string")
         }
         return formattedValue
             .replacingOccurrences(of: " ", with: "")
+            .replacingOccurrences(of: String.npsb, with: "")
             .replacingOccurrences(of: "%", with: "\(separator)%")
     }
 
