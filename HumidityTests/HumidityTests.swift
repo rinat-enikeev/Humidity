@@ -44,10 +44,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.en)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .short
-        let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 6
-        let number = NSNumber(value: Constants.abs)
-        XCTAssertEqual(formatter.string(from: value), "\(numberFormatter.string(from: number)!)g/m³")
+        XCTAssertEqual(formatter.string(from: value), "10.81g/m³")
     }
 
     func testHumidityFormatterForAbsoluteValueShortRu() {
@@ -55,10 +52,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .short
-        let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 6
-        let number = NSNumber(value: Constants.abs)
-        XCTAssertEqual(formatter.string(from: value), "\(numberFormatter.string(from: number)!)гр/м³")
+        XCTAssertEqual(formatter.string(from: value), "10.81гр/м³")
     }
 
     func testHumidityFormatterForAbsoluteValueMediumEn() {
@@ -66,10 +60,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.en)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .medium
-        let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 6
-        let number = NSNumber(value: Constants.abs)
-        XCTAssertEqual(formatter.string(from: value), "\(numberFormatter.string(from: number)!) g/m³")
+        XCTAssertEqual(formatter.string(from: value), "10.81 g/m³")
     }
 
     func testHumidityFormatterForAbsoluteValueMediumRu() {
@@ -77,10 +68,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .medium
-        let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 6
-        let number = NSNumber(value: Constants.abs)
-        XCTAssertEqual(formatter.string(from: value), "\(numberFormatter.string(from: number)!) гр/м³")
+        XCTAssertEqual(formatter.string(from: value), "10.81 гр/м³")
     }
 
     func testHumidityFormatterForAbsoluteValueLongEn() {
@@ -88,10 +76,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.en)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 6
-        let number = NSNumber(value: Constants.abs)
-        XCTAssertEqual(formatter.string(from: value), "\(numberFormatter.string(from: number)!) grams/cubic meter")
+        XCTAssertEqual(formatter.string(from: value), "10.81 grams/cubic meter")
     }
 
     func testHumidityFormatterForAbsoluteValueLongRuZero() {
@@ -99,7 +84,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "0.0 грамм/кубический метр")
+        XCTAssertEqual(formatter.string(from: value), "0 грамм/кубический метр")
     }
 
     func testHumidityFormatterForAbsoluteValueLongRuOne() {
@@ -107,7 +92,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "1.0 грамм/кубический метр")
+        XCTAssertEqual(formatter.string(from: value), "1 грамм/кубический метр")
     }
     
     func testHumidityFormatterForAbsoluteValueLongRuTwo() {
@@ -123,7 +108,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "25.0 грамм/кубический метр")
+        XCTAssertEqual(formatter.string(from: value), "25 грамм/кубический метр")
     }
     
     func testHumidityFormatterForRelativeValueShortEnZero() {
@@ -131,7 +116,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.en)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .short
-        XCTAssertEqual(formatter.string(from: value), "0.0%")
+        XCTAssertEqual(formatter.string(from: value), "0%")
     }
     
     func testHumidityFormatterForRelativeValueMediumEnZero() {
@@ -139,7 +124,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.en)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .medium
-        XCTAssertEqual(formatter.string(from: value), "0.0 %")
+        XCTAssertEqual(formatter.string(from: value), "0 %")
     }
 
     func testHumidityFormatterForRelativeValueLongEnAny() {
@@ -147,7 +132,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.en)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "0.0 percent")
+        XCTAssertEqual(formatter.string(from: value), "0 %")
     }
     
     func testHumidityFormatterForRelativeValueShortRuZero() {
@@ -155,7 +140,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .short
-        XCTAssertEqual(formatter.string(from: value), "0.0%")
+        XCTAssertEqual(formatter.string(from: value), "0%")
     }
     
     func testHumidityFormatterForRelativeValueMediumRuZero() {
@@ -163,7 +148,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .medium
-        XCTAssertEqual(formatter.string(from: value), "0.0 %")
+        XCTAssertEqual(formatter.string(from: value), "0 %")
     }
 
     func testHumidityFormatterForRelativeValueLongRuZero() {
@@ -171,7 +156,7 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "0.0 процентов")
+        XCTAssertEqual(formatter.string(from: value), "0 %")
     }
 
     func testHumidityFormatterForRelativeValueLongRuOne() {
@@ -179,22 +164,24 @@ class HumidityTests: XCTestCase {
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "1.0 процент")
+        XCTAssertEqual(formatter.string(from: value), "100 %")
     }
     
     func testHumidityFormatterForRelativeValueLongRuTwo() {
-        let value = Humidity(value: 2.2, unit: .relative(temperature: .init(value: 15, unit: .celsius)))
+        let value = Humidity(value: 0.22, unit: .relative(temperature: .init(value: 15, unit: .celsius)))
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
+        formatter.numberFormatter.numberStyle = .percent
+        formatter.numberFormatter.paddingCharacter = ""
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "2.2 процентов")
+        XCTAssertEqual(formatter.string(from: value), "22 %")
     }
 
     func testHumidityFormatterForRelativeValueLongRuMany() {
-        let value = Humidity(value: 25, unit: .relative(temperature: .init(value: 15, unit: .celsius)))
+        let value = Humidity(value: 0.253, unit: .relative(temperature: .init(value: 15, unit: .celsius)))
         HumiditySettings.setLanguage(.ru)
         let formatter = HumidityFormatter()
         formatter.unitStyle = .long
-        XCTAssertEqual(formatter.string(from: value), "25.0 процентов")
+        XCTAssertEqual(formatter.string(from: value), "25.3 %")
     }
 }
