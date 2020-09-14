@@ -82,7 +82,9 @@ open class HumidityFormatter: Formatter {
         guard let formattedValue = numberFormatter.string(from:NSNumber(value: value)) else {
             fatalError("Cannot format \(value) as string")
         }
-        return formattedValue.replacingOccurrences(of: "%", with: "\(separator)%")
+        return formattedValue
+            .replacingOccurrences(of: " ", with: "")
+            .replacingOccurrences(of: "%", with: "\(separator)%")
     }
 
     private func unit(from unitHumidity: UnitHumidity) -> Unit {
