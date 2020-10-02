@@ -37,12 +37,39 @@ import Humidity
 ```swift
 import Humidity
 
-let humidity = Humidity(c: 20, rh: 0.8)
-print(humidity.ah) // prints absolute humidity (g/m³)
-print(humidity.Td) // prints dew point (°C)
-print(humidity.TdF) // prints dew point (°F)
+var absoluteHumidity = Humidity(value: 10.812216095573042, unit: .absolute)
 
+// Converting
+absoluteHumidity.converted(to: .relative(temperature: 24.9).value // 0.472
+
+// DewPoint
+do {
+    let dewPoint = try absoluteHumidity.dewPoint(temperature: Constants.temp)
+    print(dewPoint.converted(to: .fahrenheit).value) // 55.20564209577756
+} catch {
+    print(error.localizedDescription)
+}
+
+// HumidityFormatter
+let formatter = HumidityFormatter()
+formatter.unitStyle = .short
+
+// Also you can change number formats using NumberFormatter
+formatter.numberFormatter = NumberFormatter()
+formatter.numberFormatter.maximumFractionDigits = 2
+print(formatter.string(from: absoluteHumidity))
 ```
+
+## Localization
+
+In settings you can change locale for HumidityFormatter
+```swift
+HumiditySettings.setLanguage(.en)
+```
+
+Available two languages:
+- english
+- russian
 
 ## Contribute
 
@@ -51,6 +78,7 @@ We would love you for the contribution to **Humidity**, check the ``LICENSE`` fi
 ## Credits
 
 [The IAPWS Formulation 1995 for the Thermodynamic Properties of Ordinary Water Substance for General and Scientific Use](https://doi.org/10.1063/1.1461829) 
+[Foundation Units and Measurement at developer.apple.com](https://developer.apple.com/documentation/foundation/units_and_measurement)
 
 ## Meta
 

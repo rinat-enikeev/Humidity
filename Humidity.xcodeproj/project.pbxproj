@@ -10,7 +10,14 @@
 		0EF5B74022DDED8200D9D14A /* Humidity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF5B73622DDED8200D9D14A /* Humidity.framework */; };
 		0EF5B74522DDED8200D9D14A /* HumidityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5B74422DDED8200D9D14A /* HumidityTests.swift */; };
 		0EF5B74722DDED8200D9D14A /* Humidity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF5B73922DDED8200D9D14A /* Humidity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EF5B75222DDEDC200D9D14A /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5B75122DDEDC200D9D14A /* Humidity.swift */; };
+		A907A1DB24603E8400041F6E /* UnitHumidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A907A1DA24603E8400041F6E /* UnitHumidity.swift */; };
+		A907A1DD24603EB800041F6E /* HumidityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A907A1DC24603EB800041F6E /* HumidityError.swift */; };
+		A907A1DF24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A907A1DE24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift */; };
+		A949A825246FC489006B7F4F /* HumidityFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A824246FC489006B7F4F /* HumidityFormatter.swift */; };
+		A949A831246FCAAC006B7F4F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = A949A833246FCAAC006B7F4F /* Localizable.stringsdict */; };
+		A949A83724703228006B7F4F /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */; };
+		A949A839247032E4006B7F4F /* HumiditySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949A838247032E4006B7F4F /* HumiditySettings.swift */; };
+		A98BC879250FDF21001CEFDC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98BC878250FDF21001CEFDC /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +37,15 @@
 		0EF5B73F22DDED8200D9D14A /* HumidityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HumidityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF5B74422DDED8200D9D14A /* HumidityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityTests.swift; sourceTree = "<group>"; };
 		0EF5B74622DDED8200D9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EF5B75122DDEDC200D9D14A /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
+		A907A1DA24603E8400041F6E /* UnitHumidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitHumidity.swift; sourceTree = "<group>"; };
+		A907A1DC24603EB800041F6E /* HumidityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityError.swift; sourceTree = "<group>"; };
+		A907A1DE24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementUnitHumidity+Extension.swift"; sourceTree = "<group>"; };
+		A949A824246FC489006B7F4F /* HumidityFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityFormatter.swift; sourceTree = "<group>"; };
+		A949A832246FCAAC006B7F4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A949A835246FD3DB006B7F4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		A949A838247032E4006B7F4F /* HumiditySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumiditySettings.swift; sourceTree = "<group>"; };
+		A98BC878250FDF21001CEFDC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF5B75022DDEDAE00D9D14A /* Source */,
+				A949A826246FC4FD006B7F4F /* Resources */,
 				0EF5B73922DDED8200D9D14A /* Humidity.h */,
 				0EF5B73A22DDED8200D9D14A /* Info.plist */,
 			);
@@ -92,9 +108,23 @@
 		0EF5B75022DDEDAE00D9D14A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0EF5B75122DDEDC200D9D14A /* Humidity.swift */,
+				A907A1DA24603E8400041F6E /* UnitHumidity.swift */,
+				A907A1DC24603EB800041F6E /* HumidityError.swift */,
+				A907A1DE24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift */,
+				A949A824246FC489006B7F4F /* HumidityFormatter.swift */,
+				A949A83624703228006B7F4F /* UserDefaultsWrapper.swift */,
+				A949A838247032E4006B7F4F /* HumiditySettings.swift */,
+				A98BC878250FDF21001CEFDC /* String+Extension.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		A949A826246FC4FD006B7F4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A949A833246FCAAC006B7F4F /* Localizable.stringsdict */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +202,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
+				Base,
 			);
 			mainGroup = 0EF5B72C22DDED8200D9D14A;
 			productRefGroup = 0EF5B73722DDED8200D9D14A /* Products */;
@@ -189,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A949A831246FCAAC006B7F4F /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF5B75222DDEDC200D9D14A /* Humidity.swift in Sources */,
+				A949A83724703228006B7F4F /* UserDefaultsWrapper.swift in Sources */,
+				A98BC879250FDF21001CEFDC /* String+Extension.swift in Sources */,
+				A949A825246FC489006B7F4F /* HumidityFormatter.swift in Sources */,
+				A907A1DB24603E8400041F6E /* UnitHumidity.swift in Sources */,
+				A907A1DF24603EFE00041F6E /* MeasurementUnitHumidity+Extension.swift in Sources */,
+				A949A839247032E4006B7F4F /* HumiditySettings.swift in Sources */,
+				A907A1DD24603EB800041F6E /* HumidityError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +266,18 @@
 			targetProxy = 0EF5B74122DDED8200D9D14A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A949A833246FCAAC006B7F4F /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A949A832246FCAAC006B7F4F /* en */,
+				A949A835246FD3DB006B7F4F /* ru */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0EF5B74822DDED8200D9D14A /* Debug */ = {
@@ -369,6 +420,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.btkit.Humidity;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -396,6 +448,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.btkit.Humidity;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
