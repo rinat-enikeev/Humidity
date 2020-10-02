@@ -17,9 +17,15 @@ public struct HumiditySettings {
 
     static var bundle: Bundle {
         if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
-            return Bundle(path: Bundle(for: HumidityFormatter.self).path(forResource: HumiditySettings.language, ofType: "lproj")!) ?? Bundle.main
+            let path = Bundle(for: HumidityFormatter.self).path(forResource: HumiditySettings.language, ofType: "lproj")
+            ?? Bundle.module.path(forResource: "\(HumiditySettings.language)", ofType: "lproj")
+            ?? ""
+            return Bundle(path: path) ?? Bundle.main
         } else {
-            return Bundle(path: Bundle(for: HumidityFormatter.self).path(forResource: "Humidity.bundle/\(HumiditySettings.language)", ofType: "lproj")!) ?? Bundle.main
+            let path = Bundle(for: HumidityFormatter.self).path(forResource: "Humidity.bundle/\(HumiditySettings.language)", ofType: "lproj")
+            ?? Bundle.module.path(forResource: "\(HumiditySettings.language)", ofType: "lproj")
+            ?? ""
+            return Bundle(path: path) ?? Bundle.main
         }
     }
 
