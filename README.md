@@ -62,12 +62,12 @@ print(formatter.string(from: absoluteHumidity))
 
 ## Localization
 
-In settings you can change locale for HumidityFormatter
+You can change locale for HumidityFormatter in `HumiditySettings`
 ```swift
 HumiditySettings.setLanguage(.en)
 ```
 
-Available two languages:
+Two languages are available:
 - english
 - russian
 
