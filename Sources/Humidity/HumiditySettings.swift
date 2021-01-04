@@ -28,8 +28,10 @@ public struct HumiditySettings {
             }
             #endif
             if path == nil {
-                assertionFailure()
-                path = ""
+                guard let testPath = Bundle(for: HumidityFormatter.self).path(forResource: "Humidity.bundle/\(HumiditySettings.language)", ofType: "lproj") else {
+                    return Bundle.main
+                }
+                return Bundle(path: testPath) ?? Bundle.main
             }
             return Bundle(path: path!) ?? Bundle.main
         } else {
@@ -44,8 +46,7 @@ public struct HumiditySettings {
             }
             #endif
             if path == nil {
-                assertionFailure()
-                path = ""
+                return Bundle.main
             }
             return Bundle(path: path!) ?? Bundle.main
         }
