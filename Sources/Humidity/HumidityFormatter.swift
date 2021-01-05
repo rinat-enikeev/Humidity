@@ -25,7 +25,8 @@ open class HumidityFormatter: Formatter {
         numberFormatter.minimumFractionDigits = 0
         numberFormatter.maximumFractionDigits = 2
         unitStyle = .medium
-        locale = Locale.current
+        locale = HumiditySettings.locale
+        numberFormatter.locale = locale
         super.init()
     }
     
@@ -35,7 +36,8 @@ open class HumidityFormatter: Formatter {
         numberFormatter.minimumFractionDigits = 0
         numberFormatter.maximumFractionDigits = 2
         unitStyle = .medium
-        locale = Locale.current
+        locale = HumiditySettings.locale
+        numberFormatter.locale = locale
         super.init(coder:coder)
     }
 
