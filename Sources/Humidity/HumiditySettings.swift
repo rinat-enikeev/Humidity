@@ -11,7 +11,10 @@ public struct HumiditySettings {
     public enum Language: String {
         case en
         case ru
+        case sv
+        case fi
     }
+
     @UserDefault("HumiditySettings.Language", defaultValue: Language.en.rawValue)
     fileprivate static var language: String
 
