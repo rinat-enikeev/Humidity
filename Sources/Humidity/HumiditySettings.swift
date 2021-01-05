@@ -13,6 +13,19 @@ public struct HumiditySettings {
         case ru
         case sv
         case fi
+
+        var locale: Locale {
+            switch self {
+            case .en:
+                return Locale(identifier: "en_US")
+            case .ru:
+                return Locale(identifier: "ru_RU")
+            case .fi:
+                return Locale(identifier: "fi")
+            case .sv:
+                return Locale(identifier: "sv")
+            }
+        }
     }
 
     @UserDefault("HumiditySettings.Language", defaultValue: Language.en.rawValue)
@@ -57,5 +70,9 @@ public struct HumiditySettings {
 
     public static func setLanguage(_ language: Language) {
         HumiditySettings.language = language.rawValue
+    }
+
+    static var locale: Locale {
+        return Language(rawValue: language)?.locale ?? Locale.current
     }
 }

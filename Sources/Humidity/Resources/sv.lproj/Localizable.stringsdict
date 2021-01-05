@@ -27,7 +27,7 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>f</string>
 			<key>other</key>
-			<string>%2$@grams/cubic meter</string>
+			<string>%2$@gram/kubikmeter</string>
 		</dict>
 	</dict>
 </dict>
