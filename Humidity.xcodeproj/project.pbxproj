@@ -46,6 +46,8 @@
 		0EF5B73F22DDED8200D9D14A /* HumidityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HumidityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF5B74422DDED8200D9D14A /* HumidityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityTests.swift; sourceTree = "<group>"; };
 		0EF5B74622DDED8200D9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AF36F625A43A240044B8C4 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = sv; path = sv.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A9AF36F725A43A350044B8C4 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = fi; path = fi.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,8 @@
 				en,
 				ru,
 				Base,
+				sv,
+				fi,
 			);
 			mainGroup = 0EF5B72C22DDED8200D9D14A;
 			productRefGroup = 0EF5B73722DDED8200D9D14A /* Products */;
@@ -273,6 +277,8 @@
 			children = (
 				0EEB3EE12526FE98008CE97B /* en */,
 				0EEB3EE22526FE98008CE97B /* ru */,
+				A9AF36F625A43A240044B8C4 /* sv */,
+				A9AF36F725A43A350044B8C4 /* fi */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
